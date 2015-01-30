@@ -1,6 +1,5 @@
 #include "main.h"
 #include "MainWindow.h"
-#include "Parser/XmlReader.h"
 
 int main(int argc, char **argv)
 {
