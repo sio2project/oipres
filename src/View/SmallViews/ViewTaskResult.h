@@ -12,6 +12,8 @@ public:
 	ViewTaskResult(const Task *task, QWidget *parent = nullptr);
 
 	void setResult(const TaskResult *newTaskResult);
+	void unsetFocus();
+	void setFocus();
 
 	const Task *getTask() const;
 	const TaskResult *getResult() const;

@@ -65,10 +65,10 @@ QString TestResult::getStatusColor() const
 	switch(this->status)
 	{
 		case TestResult::statusOK:
-			colorName = "#9f3";
+			colorName = "#5dab10";
 			break;
 		case TestResult::statusWA:
-			colorName = "#fe2e2e";
+			colorName = "#ff6666";
 			break;
 		case TestResult::statusTLE:
 			colorName = "#ff8000";

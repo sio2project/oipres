@@ -6,7 +6,7 @@ const qreal borderWidth = 2;
 
 ViewTestGroup::ViewTestGroup(const TestGroup *testGroup, QWidget *parent) : QWidget(parent), testGroup(testGroup), testGroupResult(nullptr), nextToShow(), viewTests()
 {
-	this->setStyleSheet("background-color: #424242;");
+	this->setStyleSheet("background-color: #252525;");
 	this->setAutoFillBackground(true);
 
 	qreal pos = borderWidth;

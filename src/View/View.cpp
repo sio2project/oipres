@@ -20,8 +20,8 @@ const QString viewEmptyPresentationString = QString::fromUtf8("Prezentacja jest 
 
 const qreal viewBorderWidth = 10;
 const qreal titleHeight = 100;
-const qreal taskResultHeight = 60;
-const qreal taskResultWidth = 120;
+const qreal taskResultHeight = 80;
+const qreal taskResultWidth = 220;
 
 const qreal viewMinSpeedFactor = 0;
 const qreal viewMaxSpeedFactor = 3;
@@ -52,7 +52,7 @@ View::View(QWidget *parent) : QWidget(parent),
 	this->timer->setSingleShot(true);
 	connect(this->timer, SIGNAL(timeout()), this, SLOT(nextStep()));
 
-	this->setStyleSheet("background-color: #f2f5a9;");
+	this->setStyleSheet("background-color: white;");
 	this->setAutoFillBackground(true);
 }
 
@@ -517,6 +517,13 @@ void View::setActiveViewTable(const Task *taskOfNewActiveViewTable)
 	{
 		if(viewTable->getTask() == taskOfNewActiveViewTable)
 		{
+			for(ViewTaskResult *viewTaskResult : taskResultViews)
+			{
+				if(viewTaskResult->getTask() == viewTable->getTask())
+					viewTaskResult->setFocus();
+				else
+					viewTaskResult->unsetFocus();
+			}
 			this->setActiveViewTable(viewTable);
 			return;
 		}

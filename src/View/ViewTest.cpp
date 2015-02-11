@@ -1,15 +1,15 @@
 #include "ViewTest.h"
 
-const qreal testViewHeight = 25;
+const qreal testViewHeight = 35;
 const qreal testBorderWidth = 0;
 
-const qreal testNamePercentage = 0.1;
-const qreal testResultPercentage = 0.63;
+const qreal testNamePercentage = 0.15;
+const qreal testResultPercentage = 0.58;
 const qreal testTimePercentage = 0.27;
 
 ViewTest::ViewTest(const Test * test, QWidget *parent) : QWidget(parent), test(test), testResult(nullptr)
 {
-	this->setStyleSheet("background-color: white;");
+	this->setStyleSheet("background-color: white; font-weight: bold; font-size: 30px");
 	this->setAutoFillBackground(true);
 	this->viewTestName = new ViewTestName(this->test, this);
 	this->viewTestStatus = new ViewTestStatus(this->test, this);

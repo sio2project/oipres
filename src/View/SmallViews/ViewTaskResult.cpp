@@ -2,13 +2,25 @@
 
 ViewTaskResult::ViewTaskResult(const Task *task, QWidget *parent) : QWidget(parent), task(task), result(nullptr)
 {
-	this->setStyleSheet("background-color: #96f; border-style: outset; border-width: 2px; border-radius: 10px; border-color: #868686; font-weight: bold; font-size: 20px;");
 	this->setAutoFillBackground(true);
+	this->unsetFocus();
 }
 
 void ViewTaskResult::setResult(const TaskResult *newTaskResult)
 {
 	this->result = newTaskResult;
+	this->update();
+}
+
+void ViewTaskResult::unsetFocus()
+{
+	this->setStyleSheet("background-color: #88ff55; border-style: outset; border-width: 2px; border-radius: 10px; border-color: #868686; font-weight: bold; font-size: 30px;");
+	this->update();
+}
+
+void ViewTaskResult::setFocus()
+{
+	this->setStyleSheet("background-color: #007700; color: white; border-style: outset; border-width: 2px; border-radius: 10px; border-color: #868686; font-weight: bold; font-size: 30px;");
 	this->update();
 }
 

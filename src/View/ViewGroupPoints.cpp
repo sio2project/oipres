@@ -2,7 +2,7 @@
 
 ViewGroupPoints::ViewGroupPoints(const TestGroup *testGroup, QWidget *parent) : QWidget(parent), testGroup(testGroup), testGroupResult(nullptr)
 {
-	this->setStyleSheet("background-color: #868686; color: #f2f2f2; font-weight: bold;");
+	this->setStyleSheet("background-color: #424242; color: #f2f2f2; font-weight: bold; font-size: 30px;");
 	this->setAutoFillBackground(true);
 }
 

@@ -3,7 +3,8 @@
 ViewComments::ViewComments(const Task *task, QWidget *parent) : QTextEdit(parent), task(task), taskResult(nullptr), comments("")
 {
 	this->setReadOnly(true);
-	this->setStyleSheet("background-color: #424242; color: #f2f2f2;");
+	this->setStyleSheet("background-color: #424242; color: #f2f2f2; font-size: 30px;");
+	this->setLineWrapMode(QTextEdit::NoWrap);
 }
 
 
