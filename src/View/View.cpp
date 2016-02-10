@@ -21,7 +21,7 @@ const QString viewEmptyPresentationString = QString::fromUtf8("Prezentacja jest 
 const qreal viewBorderWidth = 10;
 const qreal titleHeight = 100;
 const qreal taskResultHeight = 80;
-const qreal taskResultWidth = 220;
+const qreal taskResultWidth = 420;
 
 const qreal viewMinSpeedFactor = 0;
 const qreal viewMaxSpeedFactor = 3;
